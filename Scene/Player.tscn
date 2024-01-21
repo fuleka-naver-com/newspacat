@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4unieo5c5u62"]
+
+[ext_resource type="Script" path="res://Scene/Player.gd" id="1_nmty6"]
+[ext_resource type="Texture2D" uid="uid://birapjy6tgu6a" path="res://PNG/Sprites/Ships/spaceShips_001.png" id="2_m8snr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vsxki"]
+radius = 41.3038
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 30
+platform_floor_layers = 4294967294
+platform_wall_layers = 16
+script = ExtResource("1_nmty6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_m8snr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vsxki")
